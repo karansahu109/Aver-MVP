@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "",
+  "timestamp": "2026-01-17T18:51:00Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1463635805",
+        "education": "university",
+        "landuse": "education",
+        "name": "National Institute of Technology Delhi",
+        "website": "https://nitdelhi.ac.in/"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.1332483,
+              28.8171788
+            ],
+            [
+              77.1321824,
+              28.81618
+            ],
+            [
+              77.1316751,
+              28.8156618
+            ],
+            [
+              77.1300787,
+              28.8116777
+            ],
+            [
+              77.1311528,
+              28.8104987
+            ],
+            [
+              77.1350122,
+              28.8113716
+            ],
+            [
+              77.1332483,
+              28.8171788
+            ]
+          ]
+        ]
+      },
+      "id": "way/1463635805"
+    }
+  ]
+}
