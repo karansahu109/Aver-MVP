@@ -20,6 +20,8 @@ export default function MapPage() {
 
     map.addControl(new maplibregl.NavigationControl(), "top-left");
 
+
+
     map.on("load", () => {
       //ZONES
 
@@ -27,6 +29,23 @@ export default function MapPage() {
         map.addSource(id, {
           type: "geojson",
           data: url,
+        });
+
+        map.addLayer({
+          id: "nitdelhi-label",
+          type: "symbol",
+          source: "nitdelhi",
+          layout: {
+            "text-field": "NIT Delhi",
+            "text-size": 16,
+            "text-anchor": "center",
+            "text-offset": [0, 0.5],
+          },
+          paint: {
+            "text-color": "#000000",
+            "text-halo-color": "#ffffff",
+            "text-halo-width": 2,
+          },
         });
 
         map.addLayer({
@@ -56,20 +75,21 @@ export default function MapPage() {
       addZone("gurugram", "/geo/gurugramGeo.json", "#2a9d8f", "#ffffff");
 
       // NIT DELHI DIVIDING LINES
-map.addSource("nitd-zones", {
-  type: "geojson",
-  data: "/geo/nitdzonesGeo.json",
-});
+      map.addSource("nitd-zones", {
+        type: "geojson",
+        data: "/geo/nitdzonesGeo.json",
+      });
 
-map.addLayer({
-  id: "nitd-zones-line",
-  type: "line",
-  source: "nitd-zones",
-  paint: {
-    "line-color": "#ffffff",
-    "line-width": 2,
-  },
-});
+
+      map.addLayer({
+        id: "nitd-zones-line",
+        type: "line",
+        source: "nitd-zones",
+        paint: {
+          "line-color": "#ffffff",
+          "line-width": 2,
+        },
+      });
 
       // 3D BUILDINGS 
 
